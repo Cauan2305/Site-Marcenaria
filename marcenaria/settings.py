@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*75shqvk)68n_!0-xc_f55#r)g27-lhg3%ttc6k!e1xxkwzrim'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -123,7 +123,7 @@ STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 MEDIA_URL='media/'
 MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 # Email somente em teste nao em producao 
-EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+# EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
