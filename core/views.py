@@ -1,7 +1,7 @@
 from django.views.generic import TemplateView,FormView
-from .forms import ContatoForms
-from django.urls import reverse_lazy
-from django.contrib import messages
+# from .forms import ContatoForms
+# from django.urls import reverse_lazy
+# from django.contrib import messages
 from .models import TextoIndex,ImagemCarrousel,Texto2Index,GaleriaSala,GaleriaQuartos,GaleriaCozinha,GaleriaBanheiro,TextoSobreNos
 
 class IndexView (TemplateView):
@@ -16,23 +16,29 @@ class IndexView (TemplateView):
 
         }
         return context
-    
-class ContatoView(FormView):
+
+
+class ContatoView(TemplateView):
     template_name='contato.html'
-    form_class=ContatoForms
-    success_url=reverse_lazy('contato')
+
+
+
+# class ContatoView(FormView):
+#     template_name='contato.html'
+#     form_class=ContatoForms
+#     success_url=reverse_lazy('contato')
     
 
-    def form_valid(self, form,*args,**kwargs) :
-        # form.send_email()
-        messages.success(self.request,'Email Enviado com sucesso')
-        return super(ContatoView,self).form_valid(form,*args,**kwargs)
+#     def form_valid(self, form,*args,**kwargs) :
+#         # form.send_email()
+#         messages.success(self.request,'Email Enviado com sucesso')
+#         return super(ContatoView,self).form_valid(form,*args,**kwargs)
 
 
-    def form_invalid(self, form,*args,**kwargs):
-        form.send_email()
-        messages.error(self.request,'Erro ao Enviar o Email')
-        return super(ContatoView,self).form_invalid(form,*args,**kwargs)
+#     def form_invalid(self, form,*args,**kwargs):
+#         form.send_email()
+#         messages.error(self.request,'Erro ao Enviar o Email')
+#         return super(ContatoView,self).form_invalid(form,*args,**kwargs)
 
 
 
