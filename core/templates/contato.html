@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="description" content="Staging Template">
+    <meta name="keywords" content="Staging, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Roberio Planejados</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/elegant-icons.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/slicknav.min.css'%}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}" type="text/css">
+</head>
+
+<body>
+    <div class="container" >
+        {% if messages %}
+        {% for m in messages %}
+            <div class="alert alert-{{m.tags}}">
+                <button type="button" class="close" data-dismiss="alert" ></button>
+                <strong>{{m}}</strong>   
+                
+            </div>     
+        {% endfor %}
+        {% endif %}
+    </div>
+
+
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="offcanvas__logo">
+            <!-- <a href="{% url 'index' %}"><img src="{% static 'img/c1.jpeg' %}"  alt="" ></a> -->
+        </div>
+        <div id="mobile-menu-wrap"></div>
+        <div class="offcanvas__widget">
+            <span>Entrar em contato</span>
+            <h4>+01 123 456 789</h4>
+        </div>
+    </div>
+    <!-- Offcanvas Menu End -->
+
+    <!-- Header Section Begin -->
+    <header class="header header-normal set-bg" data-setbg="{% static 'img/little-header.jpg' %}">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <!-- <a href="{% url 'index' %}"><img src="{% static 'img/c1.jpeg' %}"  alt=""  ></a> -->
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="{% url 'index'%}">Home</a></li>
+                            <li ><a href="{% url 'projeto'%}">Projetos</a></li>
+                            <!-- class="active" -->
+                            <li><a href="{% url 'sobre'%}">Sobre-Nós</a></li>
+                            <!-- <li><a href="#">Pages</a> -->
+                                <!-- <ul class="dropdown">
+                                    <li><a href="./Project-details.html">Project Details</a></li>
+                                    <li><a href="./about.html">About</a></li>
+                                    <li><a href="./services.html">Services</a></li>
+                                    <li><a href="./blog-details.html">Blog Details</a></li>
+                                </ul> -->
+                            </li>
+                            <!-- <li><a href="./blog.html">Blog</a></li> -->
+                            <li><a href="{% url 'contato'%}">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__widget">
+                        <span>Entrar em contato</span>
+                        <h4>+01 123 456 789</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas__open"><i class="fa fa-bars"></i></div>
+        </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Contact Section Begin -->
+    <section class="contact spad" id="contato" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact__text">
+                        <div class="section-title">
+                            <span>Informação</span>
+                            <h2>Detalhes do contato</h2>
+                        </div>
+                        <p>Como você pode esperar de uma empresa que começou como um empreiteiro de interiores de alto padrão, prestamos muita atenção. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <img src="{% static 'img/contact/ci-1.png'%}" alt="">
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <span>Entrar em contato</span>
+                            <h4>+01 123 456 789</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="contact__widget__item">
+                        <div class="contact__widget__item__icon">
+                            <img src="{% static 'img/contact/ci-2.png'%}" alt="">
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h5> Endereço Email</h5>
+                            <span>roberioplanejados@hotmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="contact__widget__item last__item">
+                        <div class="contact__widget__item__icon">
+                            <img src="{% static 'img/contact/ci-3.png'%}" alt="">
+                        </div>
+                        <div class="contact__widget__item__text">
+                            <h5>Localização Oficial</h5>
+                            <span>Rua carlos gomes 785 centro<br />Limeira, SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map">
+                <iframe
+                
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3277875870745!2d-47.40660498547686!3d-22.566840531501267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c880f3f073d473%3A0xafff5e9523a946ea!2sR.%20Carlos%20Gomes%2C%20785%20-%20Centro%2C%20Limeira%20-%20SP%2C%2013480-011!5e0!3m2!1spt-BR!2sbr!4v1624664759980!5m2!1spt-BR!2sbr"
+                height="460" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="contact__form__text">
+                        <div class="section-title">
+                            <span>Form</span>
+                            <h2>Entrar em contato</h2>
+                        </div>
+                        <p>As you might expect of a company that began as a high-end interiors contractor, we pay strict
+                        attention.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="contact__form">
+                        <form action="{% url 'contato' %}"  method="POST"  id="contato"   >
+                        {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text"  name="nome" id="nome" placeholder="Name">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="text"   name="email" id="email"  placeholder="Email">
+                                </div>
+                                <div class="col-lg-12">
+                                    <textarea placeholder="Message"  name="mensagem" id="mensagem" ></textarea>
+                                    <button type="submit" class="site-btn"  id="submit-button" name="submit" >Enviar Mensagem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer set-bg" data-setbg="{% static 'img/footer-bg.jpg'%}">
+        <div class="container">
+            <!-- <div class="footer__top">
+                <div class="row">
+                    <div class="col-lg-8 col-md-6">
+                        <div class="footer__top__text">
+                            <h2>Ready To Work With Us?</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer__top__newslatter">
+                            <form action="#">
+                                <input type="text" placeholder="Enter your email...">
+                                <button type="submit"><i class="fa fa-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__logo">
+                            <!-- <a href="{% url 'index' %}"><img src="{% static 'img/c1.jpeg' %}"  alt=""  ></a> -->
+                        </div>
+                        <p>Rua carlos gomes 785 centro<br />Limeira, SP</p>
+                        <ul>
+                            <li>roberioplanejados@hotmail.com</li>
+                            <!-- <li>+84 123 456 789</li> -->
+                        </ul>
+                        <div class="footer__social">
+                            <a href="https://www.facebook.com/RoberioMoveisPlanejados"><i class="fa fa-facebook"></i></a>
+                            <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+                            <a href="https://instagram.com/roberiomplanejados?utm_medium=copy_link"><i class="fa fa-instagram"></i></a>
+                            <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+                    <div class="footer__widget">
+                        <h6>Compania</h6>
+                        <ul>
+                            <li><a href="{% url 'sobre' %}">Sobre-Nós</a></li>
+                            <li><a href="{% url 'contato' %}">Contate-Nós</a></li>
+                            <li><a href="{% url 'projeto' %}">Galeria De Fotos</a></li>
+                            <li><a href="{% url  'index' %}">Home</a></li>
+                            <!-- <li><a href="#">FAQs</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__address">
+                        <h6>Entrar em contato</h6>
+                        <p>Rua carlos gomes 785 centro<br />Limeira, SP</p>
+                        <ul>
+                            <li>roberioplanejados@hotmail.com</li>
+                            <!-- <li>+84 123 456 789</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="row">
+                    <!-- <div class="col-lg-8 col-md-7">
+                        <div class="copyright__text">
+                            <p>Copyright © <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart-o"
+                            aria-hidden="true"></i> by <a href="https://colorlib.com"
+                            target="_blank">Colorlib</a>
+                        </p>
+                    </div> -->
+                </div>
+                <!-- <div class="col-lg-4 col-sm-5">
+                    <div class="copyright__widget">
+                        <a href="#">Terms of use</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Footer Section End -->
+
+<!-- Js Plugins -->
+<script src="{% static 'js/jquery-3.3.1.min.js'%}"></script>
+<script src="{% static 'js/bootstrap.min.js'%}"></script>
+<script src="{% static 'js/jquery.slicknav.js'%}"></script>
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/slick.min.js'%}"></script>
+<script src="{% static 'js/main.js'%}"></script>
+</body>
+
+</html>
